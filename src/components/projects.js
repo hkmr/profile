@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css';
 import Card from './projectCard.js';
 import logo from '../logo.svg'
+import Container from 'react-bootstrap/Container'
+import CardDeck from 'react-bootstrap/CardDeck'
+
 
 class Projects extends Component{
 
@@ -19,9 +21,9 @@ class Projects extends Component{
 
 		return(
 
-			<div class="container">
-				<h1 class="h1 my-5 text-center text-uppercase font-weight-bold">Projects</h1>
-				<div class="card-deck">
+			<Container id={this.props.id} >
+				<h1 className="h1 my-5 text-center text-uppercase font-weight-bold text-black-50">Projects</h1>
+				<CardDeck>
 
 					<Card 
 						name="First" 
@@ -56,13 +58,13 @@ class Projects extends Component{
 						desc="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
 					/>
 
-				</div>
+				</CardDeck>
 
 				<div class="d-flex justify-content-center">
 					<a href="/projectlist.html" class="btn btn-outline-primary my-5" role="button" aria-pressed="true">see all</a>
 				</div>
 
-			</div>
+			</Container>
 
 		);
 

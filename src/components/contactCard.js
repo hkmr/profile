@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import {hackerrank} from '../images/brand-icons/hackerrank.svg';
+import Badge from 'react-bootstrap/Badge'
 
 class ContactCard extends Component{
 
@@ -10,10 +8,10 @@ class ContactCard extends Component{
 
 		return(
 			<div>
-				<h1 class="h1">
-					<span class="badge badge-secondary">
-						<a href="link" class="text-decoration-none" style={{color:'#fff'}}>{this.props.name}</a>
-					</span>
+				<h1 className="h1">
+					<Badge variant={this.props.variant}>
+						<a href="link" className="text-decoration-none" style={{color:'#fff'}}>{this.props.name}</a>
+					</Badge>
 				</h1>
 			</div>
 		);

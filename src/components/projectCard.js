@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg'
-import 'bulma/bulma.sass';
+import Card from 'react-bootstrap/Card'
 
 class ProjectCard extends Component{
 
@@ -8,16 +7,18 @@ class ProjectCard extends Component{
 
 		return(
 
-			<div class="card">
-			    <img src={this.props.image} class="card-img-top" alt={this.props.imageDesc}/>
-			    <div class="card-body">
-			      <h5 class="card-title font-weight-bold">
-			      	<a href={this.props.link} class="text-decoration-none">{this.props.name}</a>
-			      </h5>
-			      <p class="card-text font-weight-normal">{this.props.desc}</p>
-			      <p class="card-text"><small class="text-muted">by {this.props.owner}</small></p>
-			    </div>
-			</div>
+			<Card>
+				<Card.Img variant="top" src={this.props.image}/>
+			    <Card.Body>
+			      <Card.Title>
+			      	<a href={this.props.link} className="text-decoration-none">{this.props.name}</a>
+			      </Card.Title>
+			      <Card.Text>{this.props.desc}</Card.Text>
+			    </Card.Body>
+			    <Card.Footer>
+				    <small className="text-muted">by {this.props.owner}</small>
+			    </Card.Footer>
+			</Card>
 		);
 
 	}

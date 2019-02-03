@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// pulgin import
 import 'bootstrap/dist/css/bootstrap.css';
+
+// components import
 import Header from './components/header.js';
 import About from './components/about.js';
+import Achievement from './components/achievement.js';
 import Projects from './components/projects.js';
+import Skills from './components/skills.js';
 import Contact from './components/contact.js';
 import Footer from './components/footer.js';
 /*
@@ -17,40 +20,24 @@ import Footer from './components/footer.js';
 
 class App extends Component {
 
-  constructor(props){
-    super(props);
-  }
-
-  componentDidMount(){
-
-    console.log("componentDidMount");
-    this.fetchData();
-
-  }
-
-  fetchData(){
-
-    fetch('https://api.github.com/users/hkmr/repos')
-    .then(response => response.json())
-    .then(parsedJSON => console.log(parsedJSON.results))
-    .catch(error => console.log('Parsed Error', error))
-
-  }
-
-
   render() {
     return (
-      <div class="container-fluid">
+      <>
         
         <Header/>
         <About name="Harsh Kumar" desc="EAT . CODE . SLEEP . REPEAT"/>
         <hr/>
-        <Projects/>
+        <Achievement id="achievement"/>
         <hr/>
-        <Contact/>
+        <Projects id="projects" />
+        <hr/>
+        <Skills id="skills" />
+        <hr/>
+        <Contact id="contact" />
         <hr/>
         <Footer/>
-      </div>
+
+      </>
     );
   }
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Card from './contactCard.js';
-import logo from '../logo.svg';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class Contact extends Component{
 
@@ -18,27 +20,30 @@ class Contact extends Component{
 
 		return(
 
-			<div class="container">
-				<h1 class="h1 my-5 text-center text-uppercase font-weight-bold">Follow me</h1>
-				<div class="row">
-					<div class="col-sm">
-						<Card name="Facebook"/>
-					</div>
-					<div class="col-sm">
-						<Card name="Twitter"/>
-					</div>
-					<div class="col-sm">
-						<Card name="Github"/>
-					</div><div class="col-sm">
-						<Card name="Hackerrank"/>
-					</div><div class="col-sm">
-						<Card name="Hackerearth"/>
-					</div><div class="col-sm">
-						<Card name="Leetcode"/>
-					</div>
-				</div>
+			<Container id={this.props.id} >
+				<h1 className="h1 my-5 text-center text-uppercase font-weight-bold text-black-50">Follow me</h1>
+				<Row>
+					<Col sm>
+						<Card name="Facebook" variant="primary"/>
+					</Col>
+					<Col sm>
+						<Card name="Twitter" variant="primary"/>
+					</Col>
+					<Col sm>
+						<Card name="Github" variant="secondary" />
+					</Col>
+					<Col sm>
+						<Card name="Hackerrank" variant="success" />
+					</Col>
+					<Col sm>
+						<Card name="Hackerearth" variant="primary" />
+					</Col>
+					<Col sm>
+						<Card name="Leetcode" variant="warning"/>
+					</Col>
+				</Row>
 
-			</div>
+			</Container>
 
 		);
 

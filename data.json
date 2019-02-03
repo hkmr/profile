@@ -1,0 +1,132 @@
+/*
+	author 	: Harsh Kumar
+	website : 
+*/
+
+{
+
+	"author": "Harsh kumar",
+	"website": "",
+	"quote": "eat . code . sleep .repeat",
+	"profile-image": "",
+	"links": {
+		"facebook": "",
+		"github": "",
+		"hackerrank": "",
+		"hackerearth": "",
+		"leetcode": "",
+		"instagram": "",
+		"twitter": "",
+		"codechef": ""
+	},
+	"achievements" : [
+		{
+			"title" : "",
+			"image" : "",
+			"short-desc" : "",
+			"description": "",
+			"link": ""
+		},
+		{
+			"title" : "",
+			"image" : "",
+			"short-desc" : "",
+			"description": "",
+			"link": ""
+		},
+		{
+			"title" : "",
+			"image" : "",
+			"short-desc" : "",
+			"description": "",
+			"link": ""
+		},
+		{
+			"title" : "",
+			"image" : "",
+			"short-desc" : "",
+			"description": "",
+			"link": ""
+		},
+		{
+			"title" : "",
+			"image" : "",
+			"short-desc" : "",
+			"description": "",
+			"link": ""
+		},
+
+	],
+	"skills": [
+
+		{
+			"name" : "",
+			"level" : 
+		}
+		{
+			"name" : "",
+			"level" : 
+		}
+		{
+			"name" : "",
+			"level" : 
+		}
+		{
+			"name" : "",
+			"level" : 
+		}
+		{
+			"name" : "",
+			"level" : 
+		}
+
+	],
+	"projects": [
+
+		{
+			"name" : "",
+			"short-desc" : "",
+			"description" : "",
+			"image" : "",
+			"link" : "",
+			"owner" : {
+				"name" : "",
+				"link" : ""
+			}
+		}
+		{
+			"name" : "",
+			"short-desc" : "",
+			"description" : "",
+			"image" : "",
+			"link" : "",
+			"owner" : {
+				"name" : "",
+				"link" : ""
+			}
+		}
+		{
+			"name" : "",
+			"short-desc" : "",
+			"description" : "",
+			"image" : "",
+			"link" : "",
+			"owner" : {
+				"name" : "",
+				"link" : ""
+			}
+		}
+		{
+			"name" : "",
+			"short-desc" : "",
+			"description" : "",
+			"image" : "",
+			"link" : "",
+			"owner" : {
+				"name" : "",
+				"link" : ""
+			}
+		}
+		
+	]
+}
