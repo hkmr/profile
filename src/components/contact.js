@@ -24,22 +24,34 @@ class Contact extends Component{
 				<h1 className="h1 my-5 text-center text-uppercase font-weight-bold text-black-50">Follow me</h1>
 				<Row>
 					<Col sm>
-						<Card name="Facebook" variant="primary"/>
+						<Card name="Facebook" link={this.props.links.facebook} variant="primary"/>
 					</Col>
 					<Col sm>
-						<Card name="Twitter" variant="primary"/>
+						<Card name="Twitter" link={this.props.links.twitter} variant="primary"/>
 					</Col>
 					<Col sm>
-						<Card name="Github" variant="secondary" />
+						<Card name="Github" link={this.props.links.github} variant="secondary" />
 					</Col>
 					<Col sm>
-						<Card name="Hackerrank" variant="success" />
+						<Card name="Hackerrank" link={this.props.links.hackerrank} variant="success" />
 					</Col>
 					<Col sm>
-						<Card name="Hackerearth" variant="primary" />
+						<Card name="Hackerearth" link={this.props.links.hackerearth} variant="primary" />
 					</Col>
 					<Col sm>
-						<Card name="Leetcode" variant="warning"/>
+						<Card name="CodeChef" link={this.props.links.codechef} variant="warning"/>
+					</Col>
+					<Col sm>
+						<Card name="Leetcode" link={this.props.links.leetcode} variant="warning"/>
+					</Col>
+					<Col sm>
+						<Card name="Medium" link={this.props.links.medium} variant="warning"/>
+					</Col>
+					<Col sm>
+						<Card name="Instagram" link={this.props.links.instagram} variant="warning"/>
+					</Col>
+					<Col sm>
+						<Card name="LinkedIn" link={this.props.links.linkedin} variant="warning"/>
 					</Col>
 				</Row>
 

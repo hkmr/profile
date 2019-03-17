@@ -10,6 +10,8 @@ import Projects from './components/projects.js';
 import Skills from './components/skills.js';
 import Contact from './components/contact.js';
 import Footer from './components/footer.js';
+import firebase from './firebase.js';
+
 /*
   Navigation
   About
@@ -18,7 +20,136 @@ import Footer from './components/footer.js';
   Footer
 */
 
+
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    
+    this.state = {
+      achievements : [],
+      projects : [],
+      skills : [],
+      links : [],
+      author : 'harsh'
+    }
+
+  }
+
+  componentDidMount() {
+
+    this.getAchievementsData();
+    this.getSocialLinks();
+    this.getProjectsData();
+    this.getSkillsData();
+
+  }
+
+  getAchievementsData(){
+
+    const achievementRef = firebase.database().ref('achievements');
+    achievementRef.on('value', (snapshot) => {
+      let achievements = snapshot.val();
+      let newState = [];
+
+      for(let achieve in achievements){
+        newState.push({
+          id : achieve,
+          title : achievements[achieve].title,
+          shortDesc : achievements[achieve].shortDesc,
+          description : achievements[achieve].description,
+          link : achievements[achieve].link,
+          image : achievements[achieve].image
+        });
+      }
+
+      this.setState({
+        achievements : newState
+      })
+    });
+
+  }
+
+  getSocialLinks(){
+
+    const socialLinkRef = firebase.database().ref('links');
+    socialLinkRef.on('value', (snapshot) => {
+      let link = snapshot.val();
+      let newState = [];
+      newState.push({
+        id : link,
+        facebook : link.facebook,
+        twitter : link.twitter,
+        instagram : link.instagram,
+        github : link.github,
+        hackerrank : link.hackerrank,
+        hackerearth : link.hackerearth,
+        codechef : link.codechef,
+        leetcode : link.leetcode,
+        medium : link.medium,
+        linkedin : link.linkedin
+      });
+
+      this.setState({
+        links : link
+      })
+
+    });
+
+  }
+
+  getProjectsData(){
+
+    const projectRef = firebase.database().ref('projects');
+    projectRef.on('value', snapshot => {
+
+      let projects = snapshot.val();
+      let newState = [];
+
+      for(let p in projects){
+        newState.push({
+          id : p,
+          name : projects[p].name,
+          link : projects[p].link,
+          description : projects[p].description,
+          shortDesc : projects[p].shortDesc,
+          image : projects[p].image,
+          owner : {
+            name : projects[p].owner.name,
+            link : projects[p].owner.link
+          }
+        });
+      }
+
+      this.setState({
+        projects : newState
+      });
+
+    });
+
+  }
+
+  getSkillsData(){
+
+    const skillsRef = firebase.database().ref('skills');
+    skillsRef.on('value', snapshot => {
+      let skills = snapshot.val();
+      let newState = [];
+
+      for(let s in skills){
+        newState.push({
+          id : s,
+          name : skills[s].name,
+          level : skills[s].level
+        });
+      }
+      
+      this.setState({
+        skills : newState
+      });
+
+    });
+  }
 
   render() {
     return (
@@ -27,13 +158,13 @@ class App extends Component {
         <Header/>
         <About name="Harsh Kumar" desc="EAT . CODE . SLEEP . REPEAT"/>
         <hr/>
-        <Achievement id="achievement"/>
+        <Achievement list={this.state.achievements} id="achievement"/>
         <hr/>
-        <Projects id="projects" />
+        <Projects list={this.state.projects} id="projects" />
         <hr/>
-        <Skills id="skills" />
+        <Skills list={this.state.skills} id="skills" />
         <hr/>
-        <Contact id="contact" />
+        <Contact links={this.state.links} id="contact" />
         <hr/>
         <Footer/>
 

@@ -41,16 +41,24 @@ class AchievementCard extends Component{
 			    	<Button variant="outline-primary" onClick={this.handleShow}>
 			    		Click
 			    	</Button>
-			    	<Modal centered="true" show={this.state.show} onHide={this.handleClose}>
+						{/* Modal */}
+			    	<Modal centered="true" size="lg" show={this.state.show} onHide={this.handleClose}>
 			          <Modal.Header closeButton>
-			            <Modal.Title>Modal heading</Modal.Title>
+			            <Modal.Title>{this.props.title}</Modal.Title>
 			          </Modal.Header>
-			          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+			          <Modal.Body>
+			          	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			          </Modal.Body>
 			          <Modal.Footer>
 			            <Button variant="secondary" onClick={this.handleClose}>
 			              Close
 			            </Button>
-			            <Button variant="primary" onClick={this.handleClose}>
+			            <Button href={this.props.link} variant="primary">
 			              Save Changes
 			            </Button>
 			          </Modal.Footer>

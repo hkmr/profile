@@ -25,43 +25,24 @@ class Projects extends Component{
 				<h1 className="h1 my-5 text-center text-uppercase font-weight-bold text-black-50">Projects</h1>
 				<CardDeck>
 
-					<Card 
-						name="First" 
-						link="www.google.com" 
-						image={logo} 
-						imageDesc="Harsh Kumar"
-						owner="Harsh Kumar"
-						desc="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-					/>
-					<Card 
-						name="Second" 
-						link="www.google.com" 
-						image={logo} 
-						imageDesc="Harsh Kumar"
-						owner="Harsh Kumar"
-						desc="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-					/>
-					<Card 
-						name="Third" 
-						link="www.google.com" 
-						image={logo} 
-						imageDesc="Harsh Kumar"
-						owner="Harsh Kumar"
-						desc="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-					/>
-					<Card 
-						name="Fourth" 
-						link="www.google.com" 
-						image={logo} 
-						imageDesc="Harsh Kumar"
-						owner="Harsh Kumar"
-						desc="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-					/>
+					{this.props.list.map((project) => {
+						return(
+							<Card 
+								name={project.name} 
+								link={project.link} 
+								image={logo} 
+								imageDesc="Harsh Kumar"
+								owner={project.owner.name}
+								desc={project.shortDesc}
+							/>
+						);
+					
+					})}
 
 				</CardDeck>
 
-				<div class="d-flex justify-content-center">
-					<a href="/projectlist.html" class="btn btn-outline-primary my-5" role="button" aria-pressed="true">see all</a>
+				<div className="d-flex justify-content-center">
+					<a href="/projectlist.html" className="btn btn-outline-primary my-5" role="button" aria-pressed="true">see all</a>
 				</div>
 
 			</Container>

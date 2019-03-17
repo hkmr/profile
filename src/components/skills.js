@@ -18,12 +18,11 @@ class Skills extends Component{
 			<Container id={this.props.id} >
 				<h1 className="h1 my-5 text-center text-uppercase font-weight-bold text-black-50">Skills</h1>
 				  
-				<Card name="Html" percent="60" variant="sucess" />
-				<Card name="CSS" percent="80" variant="success" />
-				<Card name="Java" percent="80" variant="success" />
-				<Card name="JavaScript" percent="50" variant="warning" />
-				<Card name="C" percent="80" variant="success" />
-				<Card name="CPP" percent="40" variant="danger" />
+				{this.props.list.map(skill => {
+					return(
+						<Card name={skill.name} percent={skill.level} variant="sucess" />
+					);
+				})}
 
 			</Container>
 
