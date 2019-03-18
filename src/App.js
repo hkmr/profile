@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 // pulgin import
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -31,7 +32,8 @@ class App extends Component {
       projects : [],
       skills : [],
       links : [],
-      author : 'harsh'
+      author : null,
+      quote : null
     }
 
   }
@@ -42,6 +44,7 @@ class App extends Component {
     this.getSocialLinks();
     this.getProjectsData();
     this.getSkillsData();
+    this.getAboutData();
 
   }
 
@@ -151,12 +154,32 @@ class App extends Component {
     });
   }
 
+  getAboutData(){
+
+    const quoteRef = firebase.database().ref('quote');
+    quoteRef.on('value',snapshot => {
+      let quote = snapshot.val();
+      this.setState({
+        quote : quote
+      });
+    });
+
+    const authorRef = firebase.database().ref('author');
+    authorRef.on('value',snapshot => {
+      let author = snapshot.val();
+      this.setState({
+        author : author
+      });
+    });
+
+  }
+
   render() {
     return (
       <>
         
         <Header/>
-        <About name="Harsh Kumar" desc="EAT . CODE . SLEEP . REPEAT"/>
+        <About name={this.state.author} quote={this.state.quote} />
         <hr/>
         <Achievement list={this.state.achievements} id="achievement"/>
         <hr/>

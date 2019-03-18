@@ -20,7 +20,7 @@ class Skills extends Component{
 				  
 				{this.props.list.map(skill => {
 					return(
-						<Card name={skill.name} percent={skill.level} variant="sucess" />
+						<Card key={skill.id} name={skill.name} percent={skill.level} variant="sucess" />
 					);
 				})}
 

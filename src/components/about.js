@@ -13,7 +13,7 @@ class About extends Component{
 			  <Row bsPrefix="justify-content-center">
 			  	<Col>
 			  		<h1 className="display-4 text-dark text-uppercase  font-weight-bold text-center">{this.props.name}</h1>
-				  	<p className="lead text-center">{this.props.desc}</p>
+				  	<p className="lead text-center">{this.props.quote}</p>
 			  	</Col>
 			  </Row>
 			</Container>

@@ -30,27 +30,6 @@
 			"shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
 			"link": "https://www.google.com"
-		},
-		{
-			"title" : "Title 3",
-			"image" : "https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-aa46769a0faab2d9401eacaac4d1528e.svg",
-			"shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"link": "https://www.google.com"
-		},
-		{
-			"title" : "Title 4",
-			"image" : "https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-aa46769a0faab2d9401eacaac4d1528e.svg",
-			"shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"link": "https://www.google.com"
-		},
-		{
-			"title" : "Title 5",
-			"image" : "https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-aa46769a0faab2d9401eacaac4d1528e.svg",
-			"shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"link": "https://www.google.com"
 		}
 
 	],
@@ -62,18 +41,6 @@
 		{
 			"name" : "Css",
 			"level" : 50
-		},
-		{
-			"name" : "JavaScript",
-			"level" : 50
-		},
-		{
-			"name" : "Java",
-			"level" : 50
-		},
-		{
-			"name" : "C",
-			"level" : 70
 		}
 
 	],
@@ -83,8 +50,17 @@
 			"name" : "",
 			"shortDesc" : "",
 			"description" : "",
-			"image" : "",
-			"link" : "",
+			"images" : [
+				"link 1",
+				"link 2",
+				"link 3"
+			], 
+			"projectLink" : "",
+			"languages" : [
+				"Android",
+				"Java",
+				"Xml"
+			],
 			"owner" : {
 				"name" : "",
 				"link" : ""
@@ -94,30 +70,17 @@
 			"name" : "",
 			"shortDesc" : "",
 			"description" : "",
-			"image" : "",
-			"link" : "",
-			"owner" : {
-				"name" : "",
-				"link" : ""
-			}
-		},
-		{
-			"name" : "",
-			"shortDesc" : "",
-			"description" : "",
-			"image" : "",
-			"link" : "",
-			"owner" : {
-				"name" : "",
-				"link" : ""
-			}
-		},
-		{
-			"name" : "",
-			"shortDesc" : "",
-			"description" : "",
-			"image" : "",
-			"link" : "",
+			"images" : [
+				"link 1",
+				"link 2",
+				"link 3"
+			], 
+			"projectLink" : "",
+			"languages" : [
+				"Android",
+				"Java",
+				"Xml"
+			],
 			"owner" : {
 				"name" : "",
 				"link" : ""

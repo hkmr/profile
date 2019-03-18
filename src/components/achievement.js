@@ -21,7 +21,9 @@ class Achievement extends Component{
 							border="primary" 
 							title={achievement.title}
 							link={achievement.link}
-							desc={achievement.shortDesc} />
+							shortDesc={achievement.shortDesc}
+							desc={achievement.description}
+							image={achievement.image} />
 						)
 
 					})}
