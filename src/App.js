@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 // pulgin import
 import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 
 // components import
-import Header from './components/header.js';
+import Header from './components/navbar.js';
 import About from './components/about.js';
 import Achievement from './components/achievement.js';
 import Projects from './components/projects.js';
 import Skills from './components/skills.js';
 import Contact from './components/contact.js';
-import Footer from './components/footer.js';
 import firebase from './firebase.js';
 
 /*
@@ -28,17 +28,19 @@ class App extends Component {
     super(props);
     
     this.state = {
+      isLoading: true,
       achievements : [],
       projects : [],
       skills : [],
-      links : [],
+      socialLinks : [],
       author : null,
-      quote : null
+      quote : null,
     }
 
   }
 
-  componentDidMount() {
+
+  componentWillMount() {
 
     this.getAchievementsData();
     this.getSocialLinks();
@@ -54,8 +56,13 @@ class App extends Component {
     achievementRef.on('value', (snapshot) => {
       let achievements = snapshot.val();
       let newState = [];
+      let count =1;
 
       for(let achieve in achievements){
+        if(count == 4)
+          break;
+        else
+          count++;
         newState.push({
           id : achieve,
           title : achievements[achieve].title,
@@ -67,7 +74,8 @@ class App extends Component {
       }
 
       this.setState({
-        achievements : newState
+        achievements : newState,
+        isLoading : false,
       })
     });
 
@@ -75,27 +83,23 @@ class App extends Component {
 
   getSocialLinks(){
 
-    const socialLinkRef = firebase.database().ref('links');
+    const socialLinkRef = firebase.database().ref('socialLinks');
     socialLinkRef.on('value', (snapshot) => {
-      let link = snapshot.val();
+      let socialLinks = snapshot.val();
       let newState = [];
-      newState.push({
-        id : link,
-        facebook : link.facebook,
-        twitter : link.twitter,
-        instagram : link.instagram,
-        github : link.github,
-        hackerrank : link.hackerrank,
-        hackerearth : link.hackerearth,
-        codechef : link.codechef,
-        leetcode : link.leetcode,
-        medium : link.medium,
-        linkedin : link.linkedin
-      });
+      
+      for(let s in socialLinks){
+        newState.push({
+          id : s,
+          platform : socialLinks[s].platform,
+          icon : socialLinks[s].icon,
+          link : socialLinks[s].link
+        });
+      }
 
       this.setState({
-        links : link
-      })
+        socialLinks : newState
+      });
 
     });
 
@@ -108,8 +112,13 @@ class App extends Component {
 
       let projects = snapshot.val();
       let newState = [];
+      let count=1;
 
       for(let p in projects){
+        if(count == 4)
+          break;
+        else 
+          count++;
         newState.push({
           id : p,
           name : projects[p].name,
@@ -143,7 +152,8 @@ class App extends Component {
         newState.push({
           id : s,
           name : skills[s].name,
-          level : skills[s].level
+          level : skills[s].level,
+          icon : skills[s].icon
         });
       }
       
@@ -174,24 +184,38 @@ class App extends Component {
 
   }
 
-  render() {
-    return (
+
+showLoading(){
+
+  return(
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  );
+
+}
+
+  getHomeScreen(){
+
+    return(
       <>
         
         <Header/>
         <About name={this.state.author} quote={this.state.quote} />
-        <hr/>
         <Achievement list={this.state.achievements} id="achievement"/>
-        <hr/>
         <Projects list={this.state.projects} id="projects" />
-        <hr/>
         <Skills list={this.state.skills} id="skills" />
-        <hr/>
-        <Contact links={this.state.links} id="contact" />
-        <hr/>
-        <Footer/>
-
+        <Contact socialLinks={this.state.socialLinks} id="contact" />
+        
       </>
+    );
+  }
+
+  render() {
+    return (
+      this.state.isLoading ? this.showLoading() : this.getHomeScreen()
     );
   }
 }

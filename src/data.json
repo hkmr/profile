@@ -1,91 +1,150 @@
 {
-
-	"author": "Harsh kumar",
-	"website": "",
-	"quote": "eat . code . sleep .repeat",
-	"profile-image": "",
-	"links": {
-		"facebook": "https://www.facebook.com/harsh.kumar.991234",
-		"github": "https://github.com/hkmr",
-		"hackerrank": "https://www.hackerrank.com/hrshkndra",
-		"hackerearth": "https://www.hackerearth.com/@hrshkndra",
-		"leetcode": "https://leetcode.com/harshkmr991234/",
-		"instagram": "https://www.instagram.com/insta.harshKumar/",
-		"twitter": "https://twitter.com/tweetkoolharsh",
-		"codechef": "https://www.codechef.com/users/codeword_hack",
-		"medium": "https://medium.com/@blog.harsh",
-		"linkedin": "https://www.linkedin.com/in/harsh-kumar-371481129/"
-	},
-	"achievements" : [
+	"achievements" : [ 
 		{
-			"title" : "Title 1",
-			"image" : "https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-aa46769a0faab2d9401eacaac4d1528e.svg",
-			"shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"link": "https://www.google.com"
+	  "description" : "Udacity has provided the scholarship for the android-basic-nanodegree, where i got selected and completed all rounds and project.",
+	  "image" : "https://firebasestorage.googleapis.com/v0/b/harshprofileinfo.appspot.com/o/abnd_harsh_kumar.jpg?alt=media&token=39eaee3e-a2d1-4ead-9f78-f95342c71254",
+	  "link" : "https://www.google.com",
+	  "shortDesc" : "Udacity has provided the scholarship for the android-basic-nanodegree, where i got selected and completed all rounds and project.",
+	  "title" : "Android basic Nanodegree"
+	}, {
+	  "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+	  "image" : "https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-aa46769a0faab2d9401eacaac4d1528e.svg",
+	  "link" : "https://www.google.com",
+	  "shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+	  "title" : "Achievement 2"
+	}, {
+	  "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+	  "image" : "https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-aa46769a0faab2d9401eacaac4d1528e.svg",
+	  "link" : "https://www.google.com",
+	  "shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+	  "title" : "Title 3"
+	}, {
+	  "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+	  "image" : "https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-aa46769a0faab2d9401eacaac4d1528e.svg",
+	  "link" : "https://www.google.com",
+	  "shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+	  "title" : "Title 4"
+	}, {
+	  "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+	  "image" : "https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-aa46769a0faab2d9401eacaac4d1528e.svg",
+	  "link" : "https://www.google.com",
+	  "shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+	  "title" : "Title 5"
+	} ],
+	"author" : "Harsh Kumar",
+	"socialLinks" : [
+		{
+			"platform" : "codechef",
+			"icon" : "",
+			"link" : "https://www.codechef.com/users/codeword_hack"
 		},
 		{
-			"title" : "Title 2",
-			"image" : "https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-aa46769a0faab2d9401eacaac4d1528e.svg",
-			"shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-			"link": "https://www.google.com"
+			"platform" : "facebook",
+			"icon" : "",
+			"link" : "https://www.facebook.com/harsh.kumar.991234"
+		},
+		{
+			"platform" : "github",
+			"icon" : "",
+			"link" : "https://github.com/hkmr"
+		},
+		{
+			"platform" : "hackerearth",
+			"icon" : "",
+			"link" : "https://www.hackerearth.com/@hrshkndra"
+		},
+		{
+			"platform" : "hackerrank",
+			"icon" : "",
+			"link" : "https://www.hackerrank.com/hrshkndra"
+		},
+		{
+			"platform" : "instagram",
+			"icon" : "",
+			"link" : "https://www.instagram.com/insta.harshKumar/"
+		},
+		{
+			"platform" : "leetcode",
+			"icon" : "",
+			"link" : "https://leetcode.com/harshkmr991234/"
+		},
+		{
+			"platform" : "linkedin",
+			"icon" : "",
+			"link" : "https://www.linkedin.com/in/harsh-kumar-371481129/"
+		},
+		{
+			"platform" : "medium",
+			"icon" : "",
+			"link" : "https://medium.com/@blog.harsh"
+		},
+		{
+			"platform" : "twitter",
+			"icon" : "",
+			"link" : "https://twitter.com/tweetkoolharsh"
 		}
-
 	],
-	"skills": [
+	"profile-image" : "",
+	"projects" : [ 
 		{
-			"name" : "Html",
-			"level" : 60
-		},
+	  "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+	  "image" : "https://firebasestorage.googleapis.com/v0/b/harshprofileinfo.appspot.com/o/abnd_harsh_kumar.jpg?alt=media&token=39eaee3e-a2d1-4ead-9f78-f95342c71254",
+	  "link" : "link 1",
+	  "name" : "Project 1",
+	  "owner" : {
+		"link" : "user link 1",
+		"name" : "user name"
+	  },
+	  "shortDesc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
+	}, {
+	  "description" : "",
+	  "image" : "https://avatars0.githubusercontent.com/u/9919?s=280&v=4",
+	  "link" : "",
+	  "name" : "",
+	  "owner" : {
+		"link" : "",
+		"name" : "Harsh kumar"
+	  },
+	  "shortDesc" : ""
+	}, {
+	  "description" : "",
+	  "image" : "https://avatars0.githubusercontent.com/u/9919?s=280&v=4",
+	  "link" : "",
+	  "name" : "",
+	  "owner" : {
+		"link" : "",
+		"name" : ""
+	  },
+	  "shortDesc" : ""
+	}, {
+	  "description" : "",
+	  "image" : "https://avatars0.githubusercontent.com/u/9919?s=280&v=4",
+	  "link" : "",
+	  "name" : "",
+	  "owner" : {
+		"link" : "",
+		"name" : ""
+	  },
+	  "shortDesc" : ""
+	} ],
+	"quote" : "Programmer's are creator...",
+	"skills" : [ 
 		{
-			"name" : "Css",
-			"level" : 50
-		}
-
-	],
-	"projects": [
-
-		{
-			"name" : "",
-			"shortDesc" : "",
-			"description" : "",
-			"images" : [
-				"link 1",
-				"link 2",
-				"link 3"
-			], 
-			"projectLink" : "",
-			"languages" : [
-				"Android",
-				"Java",
-				"Xml"
-			],
-			"owner" : {
-				"name" : "",
-				"link" : ""
-			}
-		},
-		{
-			"name" : "",
-			"shortDesc" : "",
-			"description" : "",
-			"images" : [
-				"link 1",
-				"link 2",
-				"link 3"
-			], 
-			"projectLink" : "",
-			"languages" : [
-				"Android",
-				"Java",
-				"Xml"
-			],
-			"owner" : {
-				"name" : "",
-				"link" : ""
-			}
-		}
-		
-	]
-}
+	  "level" : 60,
+	  "name" : "Html"
+	}, {
+	  "level" : 50,
+	  "name" : "Css"
+	}, {
+	  "level" : 50,
+	  "name" : "JavaScript"
+	}, {
+	  "level" : 50,
+	  "name" : "Java"
+	}, {
+	  "level" : 70,
+	  "name" : "C"
+	} ],
+	"website" : ""
+  }
+  
